@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JavaScript; a beginning</title>
     <link rel="stylesheet" type="text/css" href="0-jsinfowebpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <!--animation from daneden's animation.css-->
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 <!--REQUIREMENTS: 
         A:) Must have separate HTML and CSS files connected through a link tag.
@@ -32,7 +36,7 @@
 
 
     <!----HEADER---------------------------------------------->
-    <div class="wrapper">
+    <div id="wrapper">
         <section class="topHeader">
             <header>
                 <article class="logo">
@@ -40,10 +44,17 @@
                 </article>
                 <section id="titleInfo">
                     <div>
-                        <h1>JavaScript</h1>
+                        <h1 class="animated rotateInDownLeft">JavaScript</h1>
+                    </div>
+                    <div class="upperNav">
+                        <ul>
+                            <li><a href="#objects">Objects</a></li>
+                            <li><a href="#arrays">Arrays</a></li>
+                            <li><a href="#loops">Loops</a></li>
+                        </ul>
                     </div>
                     <div>
-                        <h3>Subtitle (maybe make fixed as well?)</h3>
+                        <h3 class="animated rotateInDownLeft">Beginning Concepts</h3>
                     </div>
                 </section>
             </header>
@@ -54,19 +65,22 @@
 
 
     <!---------------NAV BAR/SIDEBAR---------------------------------->
-    <div class="navigation">
-        <sidebar id="sideBar">
+    <sidebar class="navigation animated slideInLeft">
+        <div id="sideBar">
             <!--move side bar up later-->
             <nav id="nav1">
                 <h4>Page Navigation</h4>
-                <p><a href="#arrays">Arrays</a> -
-                    <a href="#objects">Objects</a> -
-                    <a href="#loops">Loops</a></p>
+                <p><a href="#wrapper">Home</a></p>
+                <a href="#objects">Objects</a></p>
+                <a href="#arrays">Arrays</a></p>
+                <a href="#loops">Loops</a></p>
             </nav>
             <section id="nav2">
                 <h4>JavaScript Sources</h4>
-                <p><a href="#" target="blank">JS 101</a></p>
-                <p><a href="#" target="blank">Another link</a></p>
+                <p><a href="https://developer.mozilla.org/en-US/" target="blank">MDN Resources</a></p>
+                <p><a href="https://www.w3schools.com/jS/js_objects.asp" target="blank">Objects</a></p>
+                <p><a href="https://www.w3schools.com/js/js_arrays.asp" target="blank">Arrays</a></p>
+                <p><a href="https://www.w3schools.com/js/js_loop_for.asp" target="blank">Loops</a></p>
             </section>
             <section id="nav3">
                 <h4>GitBooks</h4>
@@ -75,8 +89,8 @@
                 <p><a href="https://eleven-fifty-academy.gitbook.io/javascript-101-fundamentals/1-javascript-fundamentals"
                         target="blank">JS Fundamentals</a></p>
             </section>
-        </sidebar>
-    </div>
+        </div>
+    </sidebar>
 
 
 
@@ -84,55 +98,131 @@
 
     <!-----------------------------BODY--------------------------->
     <div class="mainBody">
+        <section class="intro">
+            <p>This site introduces multiple JavaScript concepts to help kick start the learning process.
+                Below are several JavaScript concepts that are important to understand and code JavaScript.</p>
+        </section>
+        <hr>
         <section class="section1">
             <!--Objects-->
             <header id="objects">
                 <h1>Objects</h1>
             </header>
-            <p>Objects are a keyword, or variable, that is used to store multiple datatypes, properties, methods, and
-                values.</p>
-            <!---enter section showing code example-->
-            <p>Explain whats happenning in said code</p>
+            <article class="objectExample">
+                <!-- <pre id="theCode">
+                        <code>
+                                <span style="color:red">let</span> dog = {
+                                    name: "Spot",
+                                    breed: "Beagle",
+                                    age: 7,
+                                    isALawyer: false,
+                                }
+                        </code>
+                    </pre> -->
+                <div id="objectExampleText">
+
+                    <p><span style='color: purple'>let</span> dog = {</p>
+                    <p id="indent">name: "Spot",</p>
+                    <p id="indent">breed: "Beagle",</p>
+                    <p id="indent">age: 7,</p>
+                    <p id="indent">isALawyer: false,</p>
+                    <p>}</p>
+                    </p>
+                </div>
+            </article>
+
+            <p id="objectExplain">An object is a collection of properties. A property is a key with a value. The value
+                within an object can be of any datatype. In the example to the left, the dog object contains keywords
+                with set values. One such keyword is 'name', the value of which is "Spot". Objects are useful in holding
+                many properties and values of related data, and are also used in the creation of methods by placing a
+                function within a property value.
+            </p>
+
         </section>
+        <hr>
         <section class="section2">
             <!--Arrays-->
             <header id="arrays">
                 <h1>Arrays</h1>
             </header>
-            <p>Arrays are a keyword, or variable, that is used to contain multiple values. Arrays are classified as a
-                specific type of object</p>
-            <!---enter section showing code example-->
-            <p>explain whats happenning in said code</p>
+            <article class="arrayExample">
+                <p><span style="color: purple">let</span> catBreeds = ["Tabby",
+                    "Siamese", "Ragdoll", "Maine Coon"];</p>
+            </article>
+            <p id="arrayExplain">Arrays are a type of object that allows storage of multiple values in a single
+                variable. Unlike objects, they dont have keys, only the values. Arrays are indexed, which is used to
+                access the stored values. An index starts at 0, labling the first value as the 0 index. In the example
+                to the left, the 0 index would be "Tabby".</p>
         </section>
+        <hr>
         <section class="section3">
             <!--Loops (3sub sections?)-->
             <header id="loops">
                 <h1>Loops</h1>
+                <p>Loops allow us to run a block or section of code continuously until a condition is met. Below 3 types
+                    of loop statements are explained.</p>
             </header>
-            <p>Loops allow us to run a block or section of code continuously until a condition is met. There are 3 main
-                types of Loop statements, which are explained briefly below.</p>
+            <div id="loops3">
+                <!--forLoops-->
+                <article id="forLoop">
+                    <h3>forLoops</h3>
+                    <article id="forLoopExample">
+                        <div id="forLoopExampleDiv">
 
-            <article>
-                <h3>forLoops</h3>
-                <!--code example-->
-                <p>forLoops need to contain 3 expressions. The first one declares a variable, the second states a
-                    condition that must be met before iteration of the loop, and the third states and expression to be
-                    evaluated after the loop has run each time.</p>
-            </article>
-            <!--forLoops-->
-            <article>
-                <h3>forOfLoops</h3>
-                <!--code example-->
-                <p>Only works with iterable values. This allows it to work well with arrays, but cannot work with
-                    objects.</p>
-            </article>
-            <!--ForOfLoops-->
-            <article>
-                <h3>forInLoops</h3>
-                <!--code example-->
-                <p>Used for iterating values in an object that are normally non iterable.</p>
-            </article>
+                            <p><span style="color: purple">for</span> ( <span style="color: purple">let</span> x = 0; x
+                                < 6; x +=1 ){ </p> <p id="consoleLog"><span
+                                        style="color:lightgreen">console</span>.<span
+                                        style="color: lightgoldenrodyellow">log</span>(x);
+                            </p>
+                            <p>}</p>
+                        </div>
+                    </article>
+                    <p>For Loops need to contain 3 expressions. The first one declares a variable, the second states a
+                        condition that must be met for the loop to continue, and the third states an expression to be
+                        evaluated after the loop has run each time. X is assigned 0. As long as the value of X is less
+                        than 6, the loop continues. If X is less than 6, X becomes (X + 1) and then reruns using the new
+                        value of X. with each loop, the console prints value of X for each loop.</p>
+                </article>
+                <!--forOfLoops-->
+                <article id="forOfLoop">
+                    <h3>For Of Loops</h3>
+                    <article id="forOfLoopExample">
+                        <div id="forOfLoopExampleDiv">
 
+                            <p><span style="color: purple">for</span> ( <span style="color: purple">let</span> cat <span
+                                    style="color: purple">of</span> catBreeds
+                                ){</p>
+                            <p id="consoleLog"><span style="color:lightgreen">console</span>.<span
+                                    style="color: lightgoldenrodyellow">log</span>(cat);</p>
+                            <p>}</p>
+                        </div>
+                    </article>
+                    <p>For Of Loops are iterable. This allows it to work well with arrays, but cannot work with objects.
+                        This loop allows us to retrieve data stored in an array. In the above loop, 'cat' is a new
+                        variable created for this loop whose value is the data being retrieved. When the console is
+                        asked tp print 'cat', each individual value is printed: Tabby Siamese Ragdoll Maine Coon.</p>
+                </article>
+                <!--ForInLoops-->
+                <article id="forInLoop">
+                    <h3>forInLoops</h3>
+                    <article id="forInLoopExample">
+                        <div id="forInLoopExampleDiv">
+
+                            <p> <span style="color: purple">for</span> ( <span style="color: purple">let</span> info
+                                <span style="color: purple">in</span> dog ){</p>
+                            <p id="consoleLog"><span style="color:lightgreen">console</span>.<span
+                                    style="color: lightgoldenrodyellow">log</span>( info, dog[info]);</p>
+                            <p>}</p>
+                        </div>
+                    </article>
+                    <p>For In Loops are enumerable. Used for iterating values in an object that are normally
+                        non-iterable. This loop is useful for retrieving data stored in an object. In the above loop,
+                        'info' is a new variable created for this loop whose value pertains to the first level of data,
+                        which are the keywords. To retrieved a deeper value, you call the name of the object, dog, along
+                        with the variable 'info' : dog[info]. This opens the keyword's values.</p>
+                </article>
+
+            </div>
             <!--ForInLoops-->
         </section>
     </div>
@@ -141,11 +231,10 @@
 
 
 
-
 <!----------------------FOOTER---------------------->
 <footer>
     <div class="footer1">
-        <h4>2019 Rebekah Mantlo</h4>
+        <h4>&copy 2019 Rebekah Mantlo</h4>
     </div>
     <div class="footer2">
     </div>

@@ -1,13 +1,17 @@
 body {
-    background-color:white;
+    background-color:lightgrey;
     margin:0;
 }
 /*.wrapper{ }*/
+/**********************************/
 /*****TITLE********/
 .topHeader{
     width: 100%;
     height: 200px;
     margin:0;
+    border-width:0px 0px 5px 0px;
+    border-style:solid;
+    border-color:white;
     background-image:url('../00-photos/purple2.jpeg');
     background-repeat:no-repeat;
     background-size: 100%;
@@ -17,7 +21,7 @@ body {
     position:relative;
     padding:50px;
     z-index:3;
-    float:left;
+    float:left; 
 }
 .logo img{
     width:100px;
@@ -30,69 +34,333 @@ body {
     text-align:left;
     margin:0;
     padding:0;
-    font-size: 70px;
-    font-size-adjust: inherit;
-    top:300px;
+    font-size: 90px;
+    position:relative;
+    top:50px;
 }
 #titleInfo h3{
+    height:auto;
+    width:600px;
     text-align:center;
-    font-size:30px;
+    font-size:40px;
+    position:relative;
+    left:70px;
+    top:40px;
     padding:10px;
     margin:0;
+    font-family: 'Courgette', cursive;
 }
-/*******************Main Body*****************************/
-.mainBody{
-    margin:7%;
+.upperNav{
+    position:absolute;
+    top: 150px;
+    right: 5%;
+}
+.upperNav ul{
+    margin:0;
+    list-style: none;
+
+}
+.upperNav li{
+    padding:30px 10px 10px 10px;
+    font-family: 'Courgette', cursive;
+    top:10px;
+    display: inline-block;
+    font-size: 20px;
+}
+.upperNav a{
+    color:white;
+    margin:auto;
+    text-decoration-line: none;
+    
+}
+.upperNav a:hover{
+    color:yellow;
 }
 
+
+/**********************************/
 /*****Navigation Bar********/
 .navigation{
     width: 150px;
-    height:500px;
+    height:72%;
     position:fixed;
     z-index:3;
-    border: 5px solid lightgrey;
+    border: 5px solid white;
     border-radius:20px;
     background-image:url('../00-photos/purple2.jpeg');
-    right:0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    left:10px;
+    bottom:10px;
 }
 #sideBar{
-    float:center;
-    padding:40px;
+    margin:auto;
+    position:relative;
+    bottom:0;
+    
 }
 #sideBar h4{
     color:gold;
+    text-decoration-line: underline;
+    font-family: 'Courgette', cursive;
 }
 #nav1{
     text-align:center;
+    padding:10px 5px 20px 5px;
+     
+}
+#nav1 p{
+    margin:5px;
 }
 #nav1 a{
     color:white;
+    text-decoration-line: none;
+    font-family: 'Lato', sans-serif;
 }
 #nav1 a:hover{
     color:yellow;
 }
 #nav2{
     text-align: center;
+    padding:0px 5px 10px 5px;
+     
+}
+#nav2 p{
+    margin:5px;
 }
 #nav2 a{
     color:white;
+    text-decoration-line: none;
+    font-family: 'Lato', sans-serif;
 }
 #nav2 a:hover{
     color:yellow;
 }
+#nav2 a:visited{
+    color:lavender;
+}
 #nav3{
     text-align: center;
+    padding:0px;
+}
+#nav3 p{
+    margin:0;
 }
 #nav3 a{
     color:white;
+    text-decoration-line: none;
+    font-family: 'Lato', sans-serif;
 }
 #nav3 a:hover{
     color:yellow;
 }
+#nav3 a:visited{
+    color:lavender;
+}
+
+/**********************************/
+/************body******************/
+.mainBody{
+    margin:70px 130px 70px 300px;
+    position:relative;
+}
+
+.intro{
+    font-size:25px;
+    padding:0px 50px 50px 0px;
+    text-align: center;
+}
+
+/**Objects***/
+.section1{
+    margin:0px 0px 50px 0px;
+    position:relative;
+    overflow: auto;
+}
+#objects{
+    font-size:25px;
+    margin:0;
+    font-family: 'Courgette', cursive;
+}
+#indent{
+    text-indent: 30px;
+}
+
+.objectExample{
+    width:50%;
+    height:225px;
+    margin:0px 50px 0px 0px;
+    border:5px solid grey;
+    border-radius:10px;
+    background: grey;
+    color:lightgrey;
+    float:left;
+    z-index:3;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+}
+#objectExampleText{
+    padding:40px 110px 40px 30%;
+    width:200px;
+    height:auto;
+    bottom:0;
+}
+#objectExampleText p{
+    margin:5px;
+    
+}
+
+#objectExplain{
+    margin: 0px 5px 0px 0px;
+    font-size: 20px;
+}
+/**Arrays***/
+.section2{
+    margin:50px 0px 50px 0px;
+    position:relative;
+    overflow: auto;
+}
+#arrays{
+    font-size:25px;
+    font-family: 'Courgette', cursive;
+}
+.arrayExample{
+    width:50%;
+    height:auto;
+    margin:0px 50px 0px 0px;
+    border:5px solid grey;
+    border-radius:10px;
+    background: grey;
+    float:left;
+    z-index:3;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+}
+.arrayExample p{
+    padding:30px 0px 30px 0px;
+    margin:0;
+    text-align: center;
+    color:lightgrey;
+}
+#arrayExplain{
+    font-size: 20px;
+    margin: 0px 5px 0px 0px;
+}
+
+/**Loops***/
+.section3{
+    margin:50px 0px 50px 0px;
+    width:auto;
+    height:auto;
+    overflow: auto;
+    position:relative;
+    
+}
+#loops{
+    font-size:25px;
+    margin:0;
+}
+#loops h1{
+    font-family: 'Courgette', cursive;
+}
+#loops3{
+    display:flex;
+    
+}
+#loops3 h3{
+    text-align: center;
+    font-size:25px;
+    font-family: 'Courgette', cursive;
+}
+#forLoop{
+    width:32%;
+    float:left;
+    padding:5px;
+    flex-direction: row;
+}
+#forLoop p{
+    margin:20px;
+}
+#forOfLoop{
+    width:32%;
+    float:left;
+    flex-direction: row;
+    padding:5px;
+}
+#forOfLoop p{
+    margin:20px;
+}
+#forInLoop{
+    width:32%;
+    float:left;
+    flex-direction: row;
+    padding:5px;
+}
+#forInLoop p{
+    margin:20px;
+}
+#consoleLog{
+    text-indent: 20px;
+}
+#forLoopExample{
+    width:auto;
+    height:auto;
+    margin:0;
+    border:5px solid grey;
+    border-radius:10px;
+    background: grey;
+    color:lightgrey;
+    font-weight: bold;
+    font-size:15px;
+    font-family: 'Lato', sans-serif;
+}
+#forLoopExampleDiv{
+    padding:0px 0px 0px 30px;
+}
+#forOfLoopExample{
+    width:auto;
+    height:auto;
+    border:5px solid grey;
+    border-radius:10px;
+    background: grey;
+    color:lightgrey;
+    font-weight: bold;
+    font-size:15px;
+    font-family: 'Lato', sans-serif;
+    
+}
+#forOfLoopExampleDiv{
+    padding: 0px 0px 0px 30px;
+}
+#forInLoopExample{
+    width:auto;
+    height:auto;
+    margin:0;
+    border:5px solid grey;
+    border-radius:10px;
+    background: grey;
+    color:lightgrey;
+    font-weight:bold;
+    font-size:15px;
+    font-family: 'Lato', sans-serif;
+}
+#forInLoopExampleDiv {
+    padding: 0px 0px 0px 30px;
+}
+
+#forLoop{
+    font-size: 20px;
+}
+#forOfLoop{
+    font-size: 20px;
+}
+#forInLoop{
+    font-size: 20px;
+}
 
 
 
+/**********************************/
 /************Footer**********/
 .footer1{
     width: 100%;
@@ -103,4 +371,5 @@ body {
 }
 .footer1 h4{
     text-align:center;
+    padding:15px;
 }
